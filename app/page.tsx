@@ -2,6 +2,8 @@
 import { useEffect } from 'react';
 import styles from './page.module.css'
 import Project from './components/projects'
+import Introduction from './components/introduction'
+import Footer from './components/footer'
 export default function Home() {
 
   useEffect( () => {
@@ -15,11 +17,8 @@ export default function Home() {
 
 
   return (
-    <>
-      <h1>Horizontal Carousel with GSAP</h1>
-        <div style={{ height: '300px', overflow: 'hidden', position: 'relative' }}>
-          <Project />
-        </div>
-    </>
+    <div className={styles.content}>
+      <Project/>
+    </div>
   );
 }

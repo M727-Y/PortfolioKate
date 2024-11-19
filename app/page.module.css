@@ -3,10 +3,8 @@
 .body {
     font-family: 'Didact Gothic', sans-serif;
     margin:0;
-    margin-top: 1%;
-    margin-right: 5%;
-    margin-left:5%;
-    width: 90%;
+    
+    width: 100%;
     padding: 0;
 }
 .container{
@@ -16,13 +14,24 @@
     margin-top:28px;
     
 }
-.navBar {
+.content{
+    
     width: 100%;
+}
+.navBar {
+    width: 90%;
+    padding-left: 5%;
+    padding-right: 5%;
+    background-color: #fff;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
     height: 6vh;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    
+    position: fixed; /* Add this line */
+    top: 0; /* Ensures it stays at the top */
+    z-index: 1000;
 }
 .logo{
     display: flex;
@@ -57,7 +66,7 @@
 }
 .navBar li a{
     font-weight: bold;
-    
+    color: #333;
 }
 .navBar li:hover{
     background-color: #cdcdcd;
@@ -74,3 +83,69 @@
     font-weight: bold;
     text-align: center;
 }
+
+.scrollSectionOuter {
+    overflow: hidden;
+    width: 100%;
+    
+  }
+  
+  .scrollSectionInner {
+    height: 30vh;
+    width: 200%;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+  }
+  
+  .scrollSection {
+    height: 60vh;
+    width: 100%;
+    
+    
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .scrollSection h3 {
+    color: var(--primaryTextColor);
+    letter-spacing: var(--headlineMedium);
+    font-size: var(--headlineMedium);
+    text-transform: uppercase;
+  }
+  .projectContainer{
+    background-color: #333;
+    width:20%;
+    height: 100%;
+    transition: opacity 0.3s ease-in-out;
+  }
+ 
+  .projectContainer:hover{
+    
+    opacity: 0.7;
+  }
+  .introduction{
+    margin-top: 0;
+    padding: 5%;
+    
+    display: flex;
+    flex-direction: row;
+
+    
+
+  }
+  .introductionName{
+    width: 30%;
+  }
+  .introductionObjective{
+    width: 50%;
+  }
+  .footer{
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    background-color: #333;
+    z-index: 1000;
+  }

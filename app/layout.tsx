@@ -1,3 +1,4 @@
+import Footer from "./components/footer";
 import Navbar from "./components/navbar";
 import styles from './page.module.css'
 export const metadata = {
@@ -17,6 +18,7 @@ export default function RootLayout({
       <body className={styles.body}>
         <header><Navbar/></header>
         {children}
+        <footer><Footer/></footer>
         </body>
     </html>
   )
