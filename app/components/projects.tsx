@@ -73,6 +73,8 @@ import Introduction from "./introduction";
 
 function ScrollSection() {
   const sectionRef = useRef(null);
+  const section1Ref = useRef(null);
+  const section2Ref = useRef(null);
   const triggerRef = useRef(null);
   const label1Ref = useRef(null);
   const label2Ref = useRef(null);
@@ -82,7 +84,7 @@ function ScrollSection() {
   useEffect(() => {
     const sections = Array.from(document.querySelectorAll(`.${styles.scrollSection}`));
 
-    const endValue = window.innerHeight * sections.length; // Adjust end based on number of sections
+    const endValue = window.innerHeight * sections.length-1; // Adjust end based on number of sections
 
     const pin = gsap.fromTo(
       sectionRef.current,
@@ -90,7 +92,8 @@ function ScrollSection() {
         translateX: 0, // Starting position
       },
       {
-        translateX: `-${(sections.length - 1) * 100}%`, // Final position moves to last section
+        // translateX: `-${(sections.length - 1) * 100}%`, // Final position moves to last section
+        translateX: `-50%`,
         ease: "none", // No easing for smoothness
         scrollTrigger: {
           trigger: triggerRef.current,
@@ -100,7 +103,7 @@ function ScrollSection() {
           pin: true, // Pin the trigger
           pinSpacing: true, // Avoid layout shifts
           snap: {
-            snapTo: 1 / (sections.length), // Snap to each section
+            snapTo: 1 / (sections.length-1), // Snap to each section
             duration: { min: 0.2, max: 0.8 }, // Snapping duration
             delay: 0.1, // Delay before snapping
             ease: "power1.inOut", // Smooth snapping
@@ -121,15 +124,25 @@ function ScrollSection() {
     // Update labels dynamically
     const updateLabels = (activeIndex: number = 0): void => {
       gsap.to(label1Ref.current, {
-        fontSize: activeIndex === 0 ? "2rem" : "1rem",
+        fontSize: activeIndex === 0 ? "4rem" : "2rem",
         duration: 0.3,
         ease: "power1.inOut",
+        
       });
+      // gsap.to(section1Ref.current, {
+      //   opacity: activeIndex === 0 ? 1 : 0
+        
+      // });
+      // gsap.to(section2Ref.current, {
+      //   opacity: activeIndex === 1 ? 1 : 0ju
+      // });
+      // activeIndex === 0 ? document.querySelector(`.${styles.section1}`).classList.remove(styles.inactive) : document.querySelector('.section1').classList.add(styles.inactive);
       gsap.to(label2Ref.current, {
-        fontSize: activeIndex === 1 ? "2rem" : "1rem",
+        fontSize: activeIndex === 1 ? "4rem" : "2rem",
         duration: 0.3,
         ease: "power1.inOut",
       });
+      
     };
     updateLabels(0);
 
@@ -165,17 +178,18 @@ function ScrollSection() {
           <span className="divider"/>
         </div> */}
         <div className={styles.labels}>
-          <span ref={label1Ref} className={styles.label}>Graphic Design</span>
-          <span ref={label2Ref} className={styles.label}>UX/UI</span>
+          <span ref={label2Ref} className={styles.label}>UX/UI⟶</span>
+          <span ref={label1Ref} className={styles.label}>⟵Graphic Design</span>
+          
         </div>
         <div ref={sectionRef} className={styles.scrollSectionInner}>
-          <div className={`${styles.scrollSection} ${styles.section1}`}>
+          <div ref={section1Ref} className={`${styles.scrollSection} ${styles.section1}`}>
             <div className={styles.projectContainer}></div>
             <div className={styles.projectContainer}></div>
             <div className={styles.projectContainer}></div>
             <div className={styles.projectContainer}></div>
           </div>
-          <div className={`${styles.scrollSection} ${styles.section2}`}>
+          <div ref={section2Ref} className={`${styles.scrollSection} ${styles.section2}`}>
             <div className={styles.projectContainer}></div>
             <div className={styles.projectContainer}></div>
             <div className={styles.projectContainer}></div>
