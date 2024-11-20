@@ -3,7 +3,7 @@ import React, { useRef, useEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
-import Introduction from "./introduction";
+
 // import project1 from '../images/ux/project1.png';
 // import project2 from '../images/ux/project2.png';
 // import project3 from '../images/ux/project3.png';
@@ -114,8 +114,8 @@ function ScrollSection() {
     sections.forEach((section, i) => {
       ScrollTrigger.create({
         trigger: section,
-        start: "center center",
-        end: "center bottom",
+        start: "center top",
+        end: "center center",
         onEnter: () => updateLabels(i),
         onEnterBack: () => updateLabels(i),
       });
@@ -158,7 +158,7 @@ function ScrollSection() {
       {/* Wrapper Section */}
       <div ref={triggerRef}>
         {/* Trigger */}
-        <Introduction />
+        
         {/* <span
           
           className="divider"/>

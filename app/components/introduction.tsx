@@ -9,7 +9,7 @@ export default function introduction() {
             <Image src={name} alt='Kate Yugay'/>
         </div>
         <div className={styles.introductionObjective}>
-            <h3>With a background that spans diverse cultures and design perspectives, I bring a unique and thoughtful approach to UX/UI. My focus is on crafting intuitive, visually striking experiences that resonate on a personal level.</h3>
+            <p>With a background that spans diverse cultures and design perspectives, I bring a unique and thoughtful approach to UX/UI. My focus is on crafting intuitive, visually striking experiences that resonate on a personal level.</p>
         </div>
     </div>
     
