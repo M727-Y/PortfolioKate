@@ -5,14 +5,24 @@ import Image from 'next/image';
 
 interface ProjectProps {
   imgSrc: string; // Image source URL
-  link?: string;  // Optional link
+  tags?: string[];
 }
 
-export default function Project({ imgSrc, link }: ProjectProps) {
+export default function Project({ imgSrc, tags = [] }: ProjectProps) {
   return (
-    <>
-        <Image src={imgSrc} alt="Project"  className={styles.projectImage} />
-    </>
+    <div className={styles.projectContainer}>
+        <ul className={styles.tagContainer}>
+          {tags?.length > 0 ? (
+            tags.map((tag, index) => (
+              <li key={index} className={styles.tag}>
+                {tag}
+              </li>
+            ))
+          ) : null}
+          
+        </ul>
+        <Image src={imgSrc} alt="Project" className={styles.projectImage} />
+    </div>
     
   );
 }

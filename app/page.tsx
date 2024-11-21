@@ -2,6 +2,7 @@
 import { useEffect } from 'react';
 import styles from './page.module.css'
 import Project from './components/projects'
+import Introduction from './components/introduction';
 export default function Home() {
 
   useEffect( () => {
@@ -17,6 +18,7 @@ export default function Home() {
 
   return (
     <div className={styles.content}>
+      <Introduction />
       <Project/>
     </div>
   );

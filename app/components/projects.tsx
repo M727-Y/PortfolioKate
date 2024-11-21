@@ -4,10 +4,10 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import Project from "./project";
 const uxProjects = [
-  { src: require('../images/ux/project1.png'), link: "" },
-  { src: require('../images/ux/project2.png'), link: "" },
-  { src: require('../images/ux/project3.png'), link: "" },
-  { src: require('../images/ux/project4.png'), link: "" },
+  { src: require('../images/ux/project1.png'), link: "", tags:["UX Design","UI Design"] },
+  { src: require('../images/ux/project2.png'), link: "", tags:["UX Design","UI Design"] },
+  { src: require('../images/ux/project3.png'), link: "", tags:["UI Design"] },
+  { src: require('../images/ux/project4.png'), link: "", tags:["UI Design"] },
 ]
 
 // const graphicProjects = [
@@ -73,7 +73,7 @@ function ScrollSection() {
     // Update labels dynamically
     const updateLabels = (activeIndex: number = 0): void => {
       gsap.to(label1Ref.current, {
-        fontSize: activeIndex === 0 ? "4rem" : "2rem",
+        fontSize: activeIndex === 0 ? "4rem" : "3rem",
         duration: 0.3,
         ease: "power1.inOut",
         
@@ -87,7 +87,7 @@ function ScrollSection() {
       // });
       // activeIndex === 0 ? document.querySelector(`.${styles.section1}`).classList.remove(styles.inactive) : document.querySelector('.section1').classList.add(styles.inactive);
       gsap.to(label2Ref.current, {
-        fontSize: activeIndex === 1 ? "4rem" : "2rem",
+        fontSize: activeIndex === 1 ? "4rem" : "3rem",
         duration: 0.3,
         ease: "power1.inOut",
       });
@@ -134,13 +134,13 @@ function ScrollSection() {
         <div ref={sectionRef} className={styles.scrollSectionInner}>
           <div ref={section1Ref} className={`${styles.scrollSection} ${styles.section1}`}>
               {uxProjects.map((el, index)=>(
-                <Project  key={index} imgSrc={el.src}></Project>
+                <Project  key={index} imgSrc={el.src} tags={el.tags}></Project>
               ))}
               
           </div>
           <div ref={section2Ref} className={`${styles.scrollSection} ${styles.section2}`}>
               {uxProjects.map((el, index)=>(
-                <Project  key={index} imgSrc={el.src}></Project>
+                <Project  key={index} imgSrc={el.src} tags={el.tags}></Project>
               ))}
           </div>
           
