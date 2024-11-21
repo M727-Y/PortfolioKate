@@ -2,73 +2,22 @@ import styles from '../page.module.css'
 import React, { useRef, useEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import Project from "./project";
+const uxProjects = [
+  { src: require('../images/ux/project1.png'), link: "" },
+  { src: require('../images/ux/project2.png'), link: "" },
+  { src: require('../images/ux/project3.png'), link: "" },
+  { src: require('../images/ux/project4.png'), link: "" },
+]
 
-
-// import project1 from '../images/ux/project1.png';
-// import project2 from '../images/ux/project2.png';
-// import project3 from '../images/ux/project3.png';
-// import project4 from '../images/ux/project4.png';
-// import grproject1 from '../images/graphic/project1.png';
-// import grproject2 from '../images/graphic/project2.png';
-// import grproject3 from '../images/graphic/project3.png';
-// import grproject4 from '../images/graphic/project4.png';
-// import grproject5 from '../images/graphic/project5.png';
-// import grproject6 from '../images/graphic/project6.png';
-// import grproject7 from '../images/graphic/project7.png';
-// const images = [
-//   {
-//     projects: [
-//       {
-//           src:project1,
-//           link:""
-//       },
-//       {
-//           src:project2,
-//           link:""
-//       },
-//       {
-//           src:project3,
-//           link:""
-//       },
-//       {
-//           src:project4,
-//           link:""
-//       },
-//     ]
-//   },
-
-//   {
-//     projects: [
-//       {
-//           src:grproject1,
-//           link:""
-//       },
-//       {
-//           src:grproject2,
-//           link:""
-//       },
-//       {
-//           src:grproject3,
-//           link:""
-//       },
-//       {
-//           src:grproject4,
-//           link:""
-//       },
-//       {
-//           src:grproject5,
-//           link:""
-//       },
-//       {
-//           src:grproject6,
-//           link:""
-//       },
-//       {
-//           src:grproject7,
-//           link:""
-//       },
-//     ]
-//   },
+// const graphicProjects = [
+//   { src: require('../images/graphic/project1.png'), link: "" },
+//   { src: require('../images/graphic/project2.png'), link: "" },
+//   { src: require('../images/graphic/project3.png'), link: "" },
+//   { src: require('../images/graphic/project4.png'), link: "" },
+//   { src: require('../images/graphic/project5.png'), link: "" },
+//   { src: require('../images/graphic/project6.png'), link: "" },
+  
 // ];
 
 function ScrollSection() {
@@ -184,16 +133,15 @@ function ScrollSection() {
         </div>
         <div ref={sectionRef} className={styles.scrollSectionInner}>
           <div ref={section1Ref} className={`${styles.scrollSection} ${styles.section1}`}>
-            <div className={styles.projectContainer}></div>
-            <div className={styles.projectContainer}></div>
-            <div className={styles.projectContainer}></div>
-            <div className={styles.projectContainer}></div>
+              {uxProjects.map((el, index)=>(
+                <Project  key={index} imgSrc={el.src}></Project>
+              ))}
+              
           </div>
           <div ref={section2Ref} className={`${styles.scrollSection} ${styles.section2}`}>
-            <div className={styles.projectContainer}></div>
-            <div className={styles.projectContainer}></div>
-            <div className={styles.projectContainer}></div>
-            <div className={styles.projectContainer}></div>
+              {uxProjects.map((el, index)=>(
+                <Project  key={index} imgSrc={el.src}></Project>
+              ))}
           </div>
           
         </div>

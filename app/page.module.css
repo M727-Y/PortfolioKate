@@ -97,8 +97,8 @@
     height: 70vh;
     width: 100%;
     transition: opacity 0.3s ease;
-    padding-left: 1%;
-    padding-right: 1%;
+    padding-left: 2.5%;
+    padding-right: 2.5%;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -116,13 +116,18 @@
     height: 100%;
     transition: opacity 0.3s ease-in-out;
   }
+  .projectImage{
+    width:24%;
+    height: 100%;
+    object-fit: cover;
+  }
  
   .projectContainer:hover{
     
     opacity: 0.7;
   }
   .introduction{
-    margin-top: 0;
+    margin-top: 10vh;
     padding: 5%;
     padding-top: 8vh;
     padding-bottom: 0;
@@ -137,7 +142,8 @@
     width: 30%;
   }
   .introductionObjective{
-    width: 50%;
+    width: 38%;
+    text-align: start;
     font-weight: 150; 
     opacity: 60%;
   }
@@ -145,6 +151,7 @@
     display: flex;
     flex-direction: row-reverse;
     padding-top:8vh ;
+    margin-right: 5%;
     
   }
   .label{
@@ -163,3 +170,4 @@
     display: flex;
     justify-content: center;
   }
+
