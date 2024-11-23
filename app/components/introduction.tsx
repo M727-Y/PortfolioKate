@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import styles from '../page.module.css'
-import name from '../images/Vector.png'
+import name from '../images/Vector.svg'
 export default function introduction() {
   return (
     <div className={styles.introduction}>

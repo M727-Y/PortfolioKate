@@ -60,24 +60,33 @@
     width: 20%;
 }
 .navBar li a{
-    
+  text-decoration: none;
     color: #000;
 }
-.navBar li:hover{
-    background-color: #cdcdcd;
-}
-.navBar li:hover a{
-    color: #484848;
-}
+
 .link{
     text-decoration: none;
 }
+.link:hover{
+  text-decoration: underline #55DAEF;
+  text-decoration-thickness: 2px; /* Optional: Control the thickness of the underline */
+  text-underline-offset: 3px;
+}
 .contactLinks{
     background-color: transparent;
-    border: 1px solid #333;   
-   
+    border: 1px solid #000000;   
+    
     text-align: center;
 }
+.contactLinks:hover{
+  border: 1px solid #55DAEF;  
+  background-color: #D7F4F9;
+} 
+.contactLinks:hover :first-child{
+  color: #2B8E9E;
+}
+
+
 
 .scrollSectionOuter {
     overflow: hidden;
@@ -166,13 +175,14 @@
     width: 30%;
   }
   .introductionObjective{
-    width: 38%;
+    width: 45%;
     text-align: start;
     font-weight: 150; 
     opacity: 60%;
   }
   .labels{
     display: flex;
+    
     flex-direction: row-reverse;
     padding-top:8vh ;
     margin-right: 5%;
@@ -189,13 +199,13 @@
     display: flex;
     flex-direction: column-reverse;
 
-    background: linear-gradient(to bottom, #f8fafc 102%, rgba(102, 102, 102, 0) 35%);
+    background: linear-gradient(to bottom , #11172908, rgb(255, 255, 255));
     z-index: 1000;
   }
   .footerImage{
+    
     display: flex;
     justify-content: center;
-    opacity: 100%;
-
   }
+
 

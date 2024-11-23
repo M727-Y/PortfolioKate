@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from '../page.module.css'
 import Image from 'next/image'
-import letsConnect from '../images/LetsConnect.png'
+import letsConnect from '../images/LetsConnect.svg'
 export default function Footer() {
   return (
     <div className={styles.footer}>

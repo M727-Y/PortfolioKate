@@ -22,7 +22,7 @@ export default function Navbar() {
           <Link className={styles.link} href="/">Resume</Link>
         </li>
         <li className={styles.contactLinks}>
-          <Link className={styles.link} href="/contacts">Get In Touch</Link>
+          <Link className='contactBtn' href="/contacts">Get In Touch</Link>
         </li>
       </ul>
     </nav>
