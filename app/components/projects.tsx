@@ -3,11 +3,15 @@ import React, { useRef, useEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import Project from "./project";
+import project1 from '../images/ux/project1.png';
+import project2 from '../images/ux/project2.png';
+import project3 from '../images/ux/project3.png';
+import project4 from '../images/ux/project4.png';
 const uxProjects = [
-  { src: require('../images/ux/project1.png'), link: "", tags:["UX Design","UI Design"] },
-  { src: require('../images/ux/project2.png'), link: "", tags:["UX Design","UI Design"] },
-  { src: require('../images/ux/project3.png'), link: "", tags:["UI Design"] },
-  { src: require('../images/ux/project4.png'), link: "", tags:["UI Design"] },
+  { src: project1, link: "", tags:["UX Design","UI Design"] },
+  { src: project2, link: "", tags:["UX Design","UI Design"] },
+  { src: project3, link: "", tags:["UI Design"] },
+  { src: project4, link: "", tags:["UI Design"] },
 ]
 
 // const graphicProjects = [

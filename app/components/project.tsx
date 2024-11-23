@@ -1,10 +1,10 @@
 import React from 'react';
 import styles from '../page.module.css';
 import Image from 'next/image';
-
+import project1 from '../images/ux/project1.png';
 
 interface ProjectProps {
-  imgSrc: string; // Image source URL
+  imgSrc: typeof project1; // Image source URL
   tags?: string[];
 }
 
