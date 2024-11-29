@@ -14,7 +14,7 @@ export default function Project({ imgSrc, tags = [] }: ProjectProps) {
         <ul className={styles.tagContainer}>
           {tags?.length > 0 ? (
             tags.map((tag, index) => (
-              <li key={index} className={styles.tag}>
+              <li key={index} className={`${styles.tag} ${tag.toLowerCase() === 'ux design' ? styles.uxTag : ''}`} >
                 {tag}
               </li>
             ))

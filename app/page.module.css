@@ -59,13 +59,19 @@
     padding: 1%;
     width: 20%;
 }
-.navBar li a{
-  text-decoration: none;
-    color: #000;
-}
+
 
 .link{
     text-decoration: none;
+    color: #000;
+    display: flex;
+    align-items: center;  
+    justify-content: center;
+
+    transition: background-color .4s ease, color 0.3s ease;
+    border-radius: 12px;
+    padding: 1%;
+    width: 20%;
 }
 .link:hover{
   text-decoration: underline #55DAEF;
@@ -75,8 +81,20 @@
 .contactLinks{
     background-color: transparent;
     border: 1px solid #000000;   
-    
+    color: #fff;
+    display: flex;
+    align-items: center;  
+    justify-content: center;
+    text-decoration: none;
+    transition: background-color .4s ease, color 0.3s ease;
+    border-radius: 12px;
+    padding: 1%;
+    width: 7%;
     text-align: center;
+}
+.contactLinks :first-child{
+  text-decoration: none;
+  color: #000;
 }
 .contactLinks:hover{
   border: 1px solid #55DAEF;  
@@ -84,6 +102,13 @@
 } 
 .contactLinks:hover :first-child{
   color: #2B8E9E;
+}
+.arrowContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  margin-top:0.5rem;
 }
 
 
@@ -128,6 +153,7 @@
     transition: opacity 0.3s ease-in-out;
     border-radius: 15px;
   }
+  
  
   .projectImage:hover{
     
@@ -158,6 +184,10 @@
     border-radius: 29px;
     font-size: 14px;
 
+  }
+  .uxTag {
+    background-color: #E3E8EF;
+    color: #4A5567;
   }
   .introduction{
     margin-top: 10vh;
@@ -207,5 +237,4 @@
     display: flex;
     justify-content: center;
   }
-
 
