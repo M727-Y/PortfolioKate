@@ -12,7 +12,7 @@ interface ProjectProps {
 
 export default function Project({ imgSrc, tags = [], height = 100 }: ProjectProps) {
   
-
+  const imageClass = tags.length > 0 ? styles.imageWithTags : styles.imageWithoutTags;
   // Dynamically assign a height class based on the `height` prop
   const heightClass = styles[`height${height}`]; 
 
@@ -37,7 +37,7 @@ export default function Project({ imgSrc, tags = [], height = 100 }: ProjectProp
       <Image
         src={imgSrc}
         alt="Project"
-        className={styles.projectImage}
+        className={`${styles.projectImage} ${imageClass}`}
       />
     </div>
   );

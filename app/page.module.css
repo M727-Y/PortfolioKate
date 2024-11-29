@@ -163,13 +163,11 @@
     border-radius: 15px;
   }
   .imageWithTags {
-    height: 95%;
+    height: 92%;
   }
   
   /* Image without tags */
-  .imageWithoutTags {
-    height: 100%;
-  }
+  
   .height30 {
     height: 29%;
   }
