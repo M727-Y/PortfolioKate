@@ -103,12 +103,12 @@
 .contactLinks:hover :first-child{
   color: #2B8E9E;
 }
-.arrowContainer{
+.label> *{
   display: flex;
   flex-direction: column;
   justify-content: center;
   height: 100%;
-  margin-top:0.5rem;
+  
 }
 
 
@@ -137,23 +137,54 @@
     justify-content: space-around;
     align-items: center;
   }
-  
+.carouselRow{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width:24%;
+  height: 100%;
+}
+
+   
   
   .projectContainer{
     display: flex;
     flex-direction: column;
-    width:24%;
-    height: 100%;
+    width:100%;
+    
     
   }
   .projectImage{
     width: 100%;
-    height: 90%;
+    height: 100%;
+    
     object-fit: cover;
     transition: opacity 0.3s ease-in-out;
     border-radius: 15px;
   }
+  .imageWithTags {
+    height: 95%;
+  }
   
+  /* Image without tags */
+  .imageWithoutTags {
+    height: 100%;
+  }
+  .height30 {
+    height: 29%;
+  }
+  .height50 {
+    height: 49%;
+  }
+  .height70 {
+    height: 69%;
+  }
+  .height100 {
+    height: 100%;
+  }
+  .height95 {
+    height: 95%;
+  }
  
   .projectImage:hover{
     
@@ -163,7 +194,7 @@
     display: flex;
     flex-direction:row ;
     justify-content: flex-start;
-    height: 10%;
+    height: 5%;
     list-style: none;
     padding: 0;
     margin-top: 1vh ;

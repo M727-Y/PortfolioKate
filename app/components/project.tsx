@@ -3,27 +3,44 @@ import styles from '../page.module.css';
 import Image from 'next/image';
 import project1 from '../images/ux/project1.png';
 
+
 interface ProjectProps {
   imgSrc: typeof project1; // Image source URL
   tags?: string[];
+  height?: number; // Restricting to specific values
 }
 
-export default function Project({ imgSrc, tags = [] }: ProjectProps) {
+export default function Project({ imgSrc, tags = [], height = 100 }: ProjectProps) {
+  
+
+  // Dynamically assign a height class based on the `height` prop
+  const heightClass = styles[`height${height}`]; 
+
   return (
-    <div className={styles.projectContainer}>
+    <div className={`${styles.projectContainer} ${heightClass}`}>
+      
+      
+      {tags.length > 0 && (
         <ul className={styles.tagContainer}>
-          {tags?.length > 0 ? (
-            tags.map((tag, index) => (
-              <li key={index} className={`${styles.tag} ${tag.toLowerCase() === 'ux design' ? styles.uxTag : ''}`} >
-                {tag}
-              </li>
-            ))
-          ) : null}
-          
+          {tags.map((tag, index) => (
+            <li
+              key={index}
+              className={`${styles.tag} ${tag.toLowerCase() === 'ux design' ? styles.uxTag : ''}`}
+            >
+              {tag}
+            </li>
+          ))}
         </ul>
-        <Image src={imgSrc} alt="Project" className={styles.projectImage} />
+      )}
+
+      
+      <Image
+        src={imgSrc}
+        alt="Project"
+        className={styles.projectImage}
+      />
     </div>
-    
   );
 }
+
 
