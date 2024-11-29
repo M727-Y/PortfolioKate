@@ -7,13 +7,13 @@ import project1 from '../images/ux/project1.png';
 import project2 from '../images/ux/project2.png';
 import project3 from '../images/ux/project3.png';
 import project4 from '../images/ux/project4.png';
-import grproject1 from '../images/graphic/project1.png';
-import grproject2 from '../images/graphic/project2.png';
-import grproject3 from '../images/graphic/project3.png';
-import grproject4 from '../images/graphic/project4.png';
-import grproject5 from '../images/graphic/project5.png';
-import grproject6 from '../images/graphic/project6.png';
-import grproject7 from '../images/graphic/project7.png';
+// import grproject1 from '../images/graphic/project1.png';
+// import grproject2 from '../images/graphic/project2.png';
+// import grproject3 from '../images/graphic/project3.png';
+// import grproject4 from '../images/graphic/project4.png';
+// import grproject5 from '../images/graphic/project5.png';
+// import grproject6 from '../images/graphic/project6.png';
+// import grproject7 from '../images/graphic/project7.png';
 const uxProjects = [
   { src: project1, link: "", tags:["UX Design","UI Design"] },
   { src: project2, link: "", tags:["UX Design","UI Design"] },
