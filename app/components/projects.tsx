@@ -28,6 +28,7 @@ const graphicProjects = [
   { src: grproject4, link: "" },
   { src: grproject5, link: "" },
   { src: grproject6, link: "" },
+  { src: grproject7, link: "" },
   
 ];
 interface LongArrowProps {
