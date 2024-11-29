@@ -21,16 +21,16 @@ const uxProjects = [
   { src: project4, link: "", tags:["UI Design"] },
 ]
 
-const graphicProjects = [
-  { src: grproject1, link: "" },
-  { src: grproject2, link: "" },
-  { src: grproject3, link: "" },
-  { src: grproject4, link: "" },
-  { src: grproject5, link: "" },
-  { src: grproject6, link: "" },
-  { src: grproject7, link: "" },
+// const graphicProjects = [
+//   { src: grproject1, link: "" },
+//   { src: grproject2, link: "" },
+//   { src: grproject3, link: "" },
+//   { src: grproject4, link: "" },
+//   { src: grproject5, link: "" },
+//   { src: grproject6, link: "" },
+//   { src: grproject7, link: "" },
   
-];
+// ];
 interface LongArrowProps {
   isActive: number; // Accept isActive as a prop
   reverse?: number;
