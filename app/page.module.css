@@ -103,6 +103,12 @@
 .contactLinks:hover :first-child{
   color: #2B8E9E;
 }
+.divider{
+  font-size: 60;
+  font-weight: bold;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
 .label> *{
   display: flex;
   flex-direction: column;
@@ -128,7 +134,7 @@
   }
   
   .scrollSection {
-    height: 75vh;
+    height: 80vh;
     width: 100%;
     transition: opacity 0.3s ease;
     padding-left: 2.5%;
@@ -141,7 +147,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width:24%;
+  width:23.5%;
   height: 100%;
 }
 
@@ -169,13 +175,13 @@
   /* Image without tags */
   
   .height30 {
-    height: 29%;
+    height: 28.5;
   }
   .height50 {
-    height: 49%;
+    height: 48.5%;
   }
   .height70 {
-    height: 69%;
+    height: 68.5%;
   }
   .height100 {
     height: 100%;
@@ -231,7 +237,8 @@
 
   }
   .introductionName{
-    width: 30%;
+    width: fit-content;
+    margin-right: 3rem;
   }
   .introductionObjective{
     width: 45%;
@@ -243,7 +250,7 @@
     display: flex;
     
     flex-direction: row-reverse;
-    padding-top:8vh ;
+    padding-top:7.5vh ;
     margin-right: 5%;
     
   }

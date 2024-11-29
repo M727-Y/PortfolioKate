@@ -10,11 +10,12 @@ interface LongArrowProps {
   
     useEffect(() => {
       const targetLength = isActive === 0 ? 200 : 100; // Line length based on isActive
-  
+      const targetColor = isActive === 0 ? "black" : "#CDD5E0"
       if (arrowRef.current && polylineRef.current) {
         gsap.to(arrowRef.current, {
           duration: 0.5,
           attr: { x2: targetLength }, // Animating x2 to adjust line length
+          stroke: targetColor,
           ease: 'power2.inOut',
         });
   
@@ -25,11 +26,13 @@ interface LongArrowProps {
             attr: {
               points: `${targetLength - 20},15 ${targetLength},25 ${targetLength - 20},35`, // Adjust points for the arrowhead
             },
+            stroke: targetColor,
             ease: 'power2.inOut',
           });
         }
         gsap.to(arrowRef.current.parentElement, {
           duration: 0.5,
+          stroke: targetColor,
           width: isActive === 0 ? '200px' : '100px',
           attr: { viewBox: `0 0 ${targetLength} 50` },
           ease: 'power2.inOut',
@@ -52,7 +55,6 @@ interface LongArrowProps {
           y1="25"
           x2="200" // Initial line length
           y2="25"
-          stroke="black"
           strokeWidth="3"
         />
         {reverse === 1 ? (
@@ -61,7 +63,7 @@ interface LongArrowProps {
             points="20,15 0,25 20,35"
              
             fill="none"
-            stroke="black"
+           
             strokeWidth="3"
           />
         ) : (
@@ -69,7 +71,7 @@ interface LongArrowProps {
             ref={polylineRef}
             points="180,15 200,25 180,35" // Initial arrowhead position
             fill="none"
-            stroke="black"
+         
             strokeWidth="3"
           />
         )}

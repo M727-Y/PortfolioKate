@@ -117,7 +117,7 @@ function ScrollSection() {
       setActiveIndex(activeIndex)
       gsap.to(label1Ref.current, {
         fontSize: activeIndex === 0 ? "51" : "24",
-        
+        color: activeIndex===0?"#000":"#CDD5E0",
         duration: 0.3,
         ease: "power1.inOut",
         
@@ -132,7 +132,7 @@ function ScrollSection() {
       // activeIndex === 0 ? document.querySelector(`.${styles.section1}`).classList.remove(styles.inactive) : document.querySelector('.section1').classList.add(styles.inactive);
       gsap.to(label2Ref.current, {
         fontSize: activeIndex === 1 ? "51" : "24",
-        
+        color: activeIndex===1?"#000":"#CDD5E0",
         duration: 0.3,
         ease: "power1.inOut",
       });
@@ -181,6 +181,7 @@ function ScrollSection() {
         </div> */}
         <div className={styles.labels}>
           <span ref={label2Ref} className={styles.label}><div>Graphic Design</div><div className={styles.arrowContainer}><LongArrow reverse={0} isActive={activeIndex}/></div></span>
+          <h1 className={styles.divider}>/</h1>
           <span ref={label1Ref} className={styles.label}><div className={styles.arrowContainer}><LongArrow reverse={1} isActive={activeIndex === 1 ? 0 : 1}/></div><div>UX/UI Design</div></span>
           
         </div>
